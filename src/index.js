@@ -11,8 +11,9 @@ import { orange, red } from '@mui/material/colors';
 const theme = createTheme({
   palette:{
     primary:{
-      main:"#CCC",
-      superDark:"#1976d2"
+      main:"#1976d2",
+      superDark:"#1976d2",
+      superLight:"#CCC",
     },
     secondary:{
       main: orange[500]

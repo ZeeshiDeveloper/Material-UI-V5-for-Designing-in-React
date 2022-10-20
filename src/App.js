@@ -5,6 +5,7 @@ import { Button, Typography } from '@mui/material'
 // dtyling inside jsx first import styled and then create your custom styling
 import { styled } from "@mui/material/styles";
 import ThemeDark from './components/ThemeDark';
+import MaterialIcons from './components/MaterialIcons';
 
 function App() {
 
@@ -21,7 +22,7 @@ function App() {
       {/* go to buttom api at the last of the page in chrome and then check all props there */}
        <h2>There are Three Variants Of Buttons</h2>
        <Button variant="text" color="secondary" size="small">MAterial UI V5 (Variant)</Button>
-       <Button variant="contained" color="primary">MAterial UI V5 (Contained)</Button>
+       <Button sx={{color:"primary.superLight"}} variant="contained">MAterial UI V5 (Contained)</Button>
        <Button color="error" variant="outlined">MAterial UI V5 (Outlined)</Button>
     <br />
     <br />
@@ -76,6 +77,8 @@ function App() {
       <br />
       <hr />
       <ThemeDark />
+      <hr />
+      <MaterialIcons />
     </div>
   );
 }
