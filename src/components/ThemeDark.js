@@ -38,7 +38,8 @@ const theme2 = createTheme({
   return (
     <ThemeProvider theme={theme2}>
         {/* <CssBaseline /> */}
-        <Paper>
+        <Paper elevation={24} square>
+            {/* elevation is the sharpness and lightness of color and square remove default border radius */}
             <div>
                 <Typography variant="h2" color="primary.superDark">Theme Dark Component</Typography>
                 <Typography color="primary.superLight">There are Two Ways to use Dark theme</Typography>
