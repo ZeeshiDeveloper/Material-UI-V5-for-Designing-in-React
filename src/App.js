@@ -6,6 +6,7 @@ import { Button, Typography } from '@mui/material'
 import { styled } from "@mui/material/styles";
 import ThemeDark from './components/ThemeDark';
 import MaterialIcons from './components/MaterialIcons';
+import RatingStars from './components/RatingStars';
 
 function App() {
 
@@ -79,6 +80,8 @@ function App() {
       <ThemeDark />
       <hr />
       <MaterialIcons />
+      <hr />
+      <RatingStars />
     </div>
   );
 }
