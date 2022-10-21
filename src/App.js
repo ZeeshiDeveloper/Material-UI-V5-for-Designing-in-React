@@ -7,6 +7,8 @@ import { styled } from "@mui/material/styles";
 import ThemeDark from './components/ThemeDark';
 import MaterialIcons from './components/MaterialIcons';
 import RatingStars from './components/RatingStars';
+import Cards from './components/Cards';
+import BoxComponent from './components/BoxComponent';
 
 function App() {
 
@@ -82,6 +84,10 @@ function App() {
       <MaterialIcons />
       <hr />
       <RatingStars />
+      <hr />
+      <Cards />
+      <hr />
+      <BoxComponent />
     </div>
   );
 }
