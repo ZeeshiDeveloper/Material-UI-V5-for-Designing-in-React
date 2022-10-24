@@ -11,6 +11,7 @@ import Cards from './components/Cards';
 import BoxComponent from './components/BoxComponent';
 import SkeletonCom from './components/SkeletonCom';
 import ListComp from './components/ListComp';
+import AvaterComp from './components/AvaterComp';
 
 function App() {
 
@@ -94,6 +95,8 @@ function App() {
       <SkeletonCom/>
       <hr />
       <ListComp />
+      <hr />
+      <AvaterComp />
     </div>
   );
 }
