@@ -13,6 +13,7 @@ import SkeletonCom from './components/SkeletonCom';
 import ListComp from './components/ListComp';
 import AvaterComp from './components/AvaterComp';
 import { Box } from '@mui/system';
+import RadioButton from './components/RadioButton';
 
 function App() {
 
@@ -132,6 +133,8 @@ function App() {
       <ListComp />
       <hr />
       <AvaterComp />
+      <hr />
+      <RadioButton />
     </div>
   );
 }
