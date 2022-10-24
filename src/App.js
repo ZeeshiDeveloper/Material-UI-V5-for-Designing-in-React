@@ -1,5 +1,5 @@
 import './App.css';
-import { Button, Typography } from '@mui/material'
+import { Button, ButtonGroup, Typography } from '@mui/material'
 
 
 // dtyling inside jsx first import styled and then create your custom styling
@@ -12,6 +12,7 @@ import BoxComponent from './components/BoxComponent';
 import SkeletonCom from './components/SkeletonCom';
 import ListComp from './components/ListComp';
 import AvaterComp from './components/AvaterComp';
+import { Box } from '@mui/system';
 
 function App() {
 
@@ -52,33 +53,67 @@ function App() {
       <MyCustomButton variant="contained">customButton</MyCustomButton>
       <br />
       <Typography variant='h3'>SX Prop</Typography>
-      <Button sx={[
-        {
-        padding:2,   //1 spacing = 4px (default spacing is 2) .. here 2 p is multiplied by 8 = 16px 
-        m:2,
-        border:5,
-        color:"primary.superDark"
-        },
-        test && {
-          border:2,
-          color:"myCustomColor.superDark",
-          background:"transparent",
-          borderColor:"myCustomColor.superDark",
-          '&:hover':{
-            backgroundColor:'myCustomColor.superLight'
+      <Box sx={{display:"block",}}>
+        <Button sx={[
+          {
+          padding:2,   //1 spacing = 4px (default spacing is 2) .. here 2 p is multiplied by 8 = 16px
+          m:2,
+          border:5,
+          color:"primary.superDark"
+          },
+          test && {
+            border:2,
+            color:"myCustomColor.superDark",
+            background:"transparent",
+            borderColor:"myCustomColor.superDark",
+            '&:hover':{
+              backgroundColor:'myCustomColor.superLight'
+            }
+          },
+          // for responsive
+          {
+            width:{
+              xs:100,
+              sm:200,
+              md:300,
+              lg:400,
+              xl:500
+            }
           }
-        },
-        // for responsive
-        {
-          width:{
-            xs:100,
-            sm:200,
-            md:300,
-            lg:400,
-            xl:500
-          }
-        }
-      ]} variant="contained">SX Button</Button>
+        ]} variant="contained">SX Button</Button>
+      </Box>
+
+
+      {/* //Button Group */}
+      <Box sx={{m:2,}}>
+        <ButtonGroup variant="contained">
+          <Button>One</Button>
+          <Button>Two</Button>
+          <Button>Three</Button>
+        </ButtonGroup>
+      </Box>
+      <Box sx={{m:2,}}>
+        <ButtonGroup size="small" variant="outlined">
+          <Button>One</Button>
+          <Button>Two</Button>
+          <Button>Three</Button>
+        </ButtonGroup>
+      </Box>
+      <Box sx={{m:2,}}>
+        <ButtonGroup variant="text">
+          <Button>One</Button>
+          <Button>Two</Button>
+          <Button>Three</Button>
+        </ButtonGroup>
+      </Box>
+      <Box sx={{m:2,}}>
+        <ButtonGroup orientation='vertical' variant="contained">
+          <Button>One</Button>
+          <Button>Two</Button>
+          <Button>Three</Button>
+        </ButtonGroup>
+      </Box>
+      
 
       <br />
       <hr />
