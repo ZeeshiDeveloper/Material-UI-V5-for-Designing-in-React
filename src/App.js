@@ -10,6 +10,7 @@ import RatingStars from './components/RatingStars';
 import Cards from './components/Cards';
 import BoxComponent from './components/BoxComponent';
 import SkeletonCom from './components/SkeletonCom';
+import ListComp from './components/ListComp';
 
 function App() {
 
@@ -91,6 +92,8 @@ function App() {
       <BoxComponent />
       <hr />
       <SkeletonCom/>
+      <hr />
+      <ListComp />
     </div>
   );
 }
