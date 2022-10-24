@@ -9,6 +9,7 @@ import MaterialIcons from './components/MaterialIcons';
 import RatingStars from './components/RatingStars';
 import Cards from './components/Cards';
 import BoxComponent from './components/BoxComponent';
+import SkeletonCom from './components/SkeletonCom';
 
 function App() {
 
@@ -88,6 +89,8 @@ function App() {
       <Cards />
       <hr />
       <BoxComponent />
+      <hr />
+      <SkeletonCom/>
     </div>
   );
 }
