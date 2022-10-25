@@ -19,6 +19,7 @@ import Tooltips from './components/Tooltips';
 import DividerComp from './components/DividerComp';
 import BackDrop from './components/BackDrop';
 import Links from './components/Links';
+import CheckBox from './components/CheckBox';
 
 function App() {
 
@@ -150,6 +151,8 @@ function App() {
       <BackDrop/>
       <hr />
       <Links/>
+      <hr />
+      <CheckBox/>
     </div>
   );
 }
