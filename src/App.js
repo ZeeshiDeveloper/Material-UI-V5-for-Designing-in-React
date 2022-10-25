@@ -18,6 +18,7 @@ import TableComp from './components/TableComp';
 import Tooltips from './components/Tooltips';
 import DividerComp from './components/DividerComp';
 import BackDrop from './components/BackDrop';
+import Links from './components/Links';
 
 function App() {
 
@@ -147,6 +148,8 @@ function App() {
       <DividerComp/>
       <hr />
       <BackDrop/>
+      <hr />
+      <Links/>
     </div>
   );
 }
