@@ -16,6 +16,7 @@ import { Box } from '@mui/system';
 import RadioButton from './components/RadioButton';
 import TableComp from './components/TableComp';
 import Tooltips from './components/Tooltips';
+import DividerComp from './components/DividerComp';
 
 function App() {
 
@@ -141,6 +142,8 @@ function App() {
       <TableComp />
       <hr />
       <Tooltips />
+      <hr />
+      <DividerComp/>
     </div>
   );
 }
