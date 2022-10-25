@@ -17,6 +17,7 @@ import RadioButton from './components/RadioButton';
 import TableComp from './components/TableComp';
 import Tooltips from './components/Tooltips';
 import DividerComp from './components/DividerComp';
+import BackDrop from './components/BackDrop';
 
 function App() {
 
@@ -144,6 +145,8 @@ function App() {
       <Tooltips />
       <hr />
       <DividerComp/>
+      <hr />
+      <BackDrop/>
     </div>
   );
 }
