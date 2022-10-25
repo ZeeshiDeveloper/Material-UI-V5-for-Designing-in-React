@@ -15,6 +15,7 @@ import AvaterComp from './components/AvaterComp';
 import { Box } from '@mui/system';
 import RadioButton from './components/RadioButton';
 import TableComp from './components/TableComp';
+import Tooltips from './components/Tooltips';
 
 function App() {
 
@@ -138,6 +139,8 @@ function App() {
       <RadioButton />
       <hr />
       <TableComp />
+      <hr />
+      <Tooltips />
     </div>
   );
 }
