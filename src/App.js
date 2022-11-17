@@ -1,4 +1,5 @@
 import './App.css';
+import React  from 'react';
 import { Button, ButtonGroup, Typography } from '@mui/material'
 
 
@@ -20,6 +21,7 @@ import DividerComp from './components/DividerComp';
 import BackDrop from './components/BackDrop';
 import Links from './components/Links';
 import CheckBox from './components/CheckBox';
+import DataGridComp from './components/DataGridComp';
 
 function App() {
 
@@ -153,6 +155,8 @@ function App() {
       <Links/>
       <hr />
       <CheckBox/>
+      <hr />
+      <DataGridComp/>
     </div>
   );
 }
