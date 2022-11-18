@@ -22,6 +22,7 @@ import BackDrop from './components/BackDrop';
 import Links from './components/Links';
 import CheckBox from './components/CheckBox';
 import DataGridComp from './components/DataGridComp';
+import RowPinnigComp from './components/RowPinnigComp';
 
 function App() {
 
@@ -157,6 +158,8 @@ function App() {
       <CheckBox/>
       <hr />
       <DataGridComp/>
+      <hr />
+      <RowPinnigComp/>
     </div>
   );
 }
