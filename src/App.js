@@ -24,6 +24,36 @@ import CheckBox from './components/CheckBox';
 import DataGridComp from './components/DataGridComp';
 import RowPinnigComp from './components/RowPinnigComp';
 
+const rows = [
+  { id: 1, col1: 'Sadam', col2: 'Ali',col3:23,col4:"Engineer",col5:1999},
+  { id: 2, col1: 'Zeeshan', col2: 'Afzal',col3:22,col4:"Engineer",col5:2000},
+  { id: 3, col1: 'Waqas', col2: 'Zaffar',col3:22,col4:"Engineer" ,col5:2000},
+  { id: 4, col1: 'Malik', col2: 'Shahid',col3:24,col4:"Engineer" ,col5:1998},
+  { id: 5, col1: 'Mohsin', col2: 'Shahid',col3:24,col4:"Engineer" ,col5:1998},
+  { id: 6, col1: 'Hassan', col2: 'Shahid',col3:24,col4:"Engineer" ,col5:1998},
+  { id: 7, col1: 'Saqib', col2: 'ALi',col3:24,col4:"Engineer" ,col5:1998},
+  { id: 8, col1: 'Shehbaz', col2: 'Ali',col3:24,col4:"Engineer" ,col5:1998},
+  { id: 9, col1: 'Umer', col2: 'Farooq',col3:24,col4:"Engineer" ,col5:1998},
+  { id: 10, col1: 'Usama', col2: 'Khan',col3:24,col4:"Engineer" ,col5:1998},
+];
+
+const columns = [
+  { id:1, field: 'col1', headerName: 'First Name', width: 150 },
+  { id:2,field: 'col2', headerName: 'Last Name', width: 150 },
+  { id:3,field: "col3" ,headerName:"Age",width:150},
+  { id:4,field: "col4" ,headerName:"Profession",width:150},
+  { id:5,field: "col5" ,headerName:"Birth Year",width:150},
+  {
+    field: 'actions',
+    type: 'actions',
+    width: 100,
+    getActions: () => [
+      <GridActionsCellItem icon={<CreateIcon />} label="Edit" />,
+      <GridActionsCellItem icon={<DeleteIcon />} label="Delete" />,
+    ],
+  },
+];
+
 function App() {
 
   // create your custom styles here by initializing var
@@ -157,7 +187,7 @@ function App() {
       <hr />
       <CheckBox/>
       <hr />
-      <DataGridComp/>
+      <DataGridComp rows={rows} columns={columns} pinnedColumns=""/>
       <hr />
       <RowPinnigComp/>
     </div>

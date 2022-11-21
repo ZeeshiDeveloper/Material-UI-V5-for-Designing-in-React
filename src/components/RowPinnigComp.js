@@ -57,7 +57,6 @@ const RowPinnigComp = () => {
                             position: "sticky",
                             backgroundColor: "rgb(255, 255, 255)",
                             bottom: "0px",
-                            boxShadow: "rgb(0 0 0 / 21%) 0px 3px 4px -2px",
                             zIndex:3,
                             boxShadow: "rgb(0 0 0 / 21%) 0px -3px 4px -2px"
                         },
