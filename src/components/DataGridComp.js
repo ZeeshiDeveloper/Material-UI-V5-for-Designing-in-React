@@ -1,9 +1,9 @@
 import * as React from 'react';
 import { DataGrid,GridActionsCellItem  } from '@mui/x-data-grid';
-import { Box } from '@mui/material'
 import CreateIcon from '@mui/icons-material/Create';
 import DeleteIcon from '@mui/icons-material/Delete';
 import ColumnPinning from './ColumnPinning';
+import { Box } from '@mui/material'
 import { useEffect } from 'react';
 import { useState } from 'react';
 
@@ -37,22 +37,22 @@ import { useState } from 'react';
 //     ],
 //   },
 // ];
-const values = columns.map(object => object.field)
-console.log(values)
-if(values[0] == 'col1'){
-    console.log("it is col 1")
-}else{console.log("there is no col 1 named field here")}
+// const values = columns.map(object => object.field)
+// console.log(values)
+// if(values[0] == 'col1'){
+//     console.log("it is col 1")
+// }else{console.log("there is no col 1 named field here")}
 
-function columnPin(data){
-    // data = columns.map(object => object.field);
-    let initial = data
-    let[first,sec,third,four,fifth,sis] = data
-    console.log(sec)
-    if(first === "col1"){
-        console.log("Col 1 is Here");
-    }else if (sec === 'col2'){
-        console.log("Col 2 is Here");   
-    }else{console.log("there is no col 1 named field here")}
+// function columnPin(data){
+//     // data = columns.map(object => object.field);
+//     let initial = data
+//     let[first,sec,third,four,fifth,sis] = data
+//     console.log(sec)
+//     if(first === "col1"){
+//         console.log("Col 1 is Here");
+//     }else if (sec === 'col2'){
+//         console.log("Col 2 is Here");   
+//     }else{console.log("there is no col 1 named field here")}
 
 
 
@@ -65,8 +65,8 @@ function columnPin(data){
     //         break;
     // }
 
-}
-columnPin(values)
+// }
+// columnPin(values)
 
 // Styling 
 const firstBox = {
@@ -94,11 +94,28 @@ const DataGridComp = ({rows, columns, pinnedColumns}) => {
     const [styledPinnedColumns, setStyledPinnedColumns] = useState([])
     useEffect(() => {
         let cols = [];
-        columns.forEach()
-        cols.push()
+        columns.forEach(()=>{
+            const values = columns.map(object => object.field)
+            console.log("Value",values)
+            console.log("Pinned Columns",pinnedColumns)
+            values.map((value)=>{
+                pinnedColumns.map((pin)=>{
+                    if(value === pin){
+                        console.log("value =>", value)
+                        console.log("pin =>", pin)
+                        values.push(pin)
+                    }
+                })
+            })
+                console.log("values = ",values)
+        })
+        // cols.push()
+        console.log("cols = ",cols)
 
         setStyledPinnedColumns(cols);
     }, [])
+
+    
   return (
     <div style={{ height: 300, width: '40%', marginLeft:"auto", marginRight:"auto", p:"100px"}}>
 
@@ -115,7 +132,7 @@ const DataGridComp = ({rows, columns, pinnedColumns}) => {
             </Box>
         </Box>
 {/* Data Grid Table */}
-       <DataGrid rows={rows} columns={styledPinnedColumns} sx={{top:"-58px",
+       <DataGrid rows={rows} columns={columns} sx={{top:"-58px",
        "& .MuiDataGrid-cell":{
             "&:first-of-type":{
                 position: "sticky",
@@ -131,7 +148,13 @@ const DataGridComp = ({rows, columns, pinnedColumns}) => {
                 float: "right",
                 boxShadow: "rgb(0 0 0 / 21%) -2px 0px 4px -2px"
             },
-        }}}/> 
+        }
+        // ,'& .super-app-theme--header': {
+        //     backgroundColor: 'rgba(255, 7, 0, 0.55)',
+        //   },'& .super-app-theme--cell': {
+        //     backgroundColor: 'rgba(255, 7, 0, 0.55)',
+        //   }
+          }}/> 
     </div>
   );
 }

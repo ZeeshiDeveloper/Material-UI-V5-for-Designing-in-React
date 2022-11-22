@@ -2,6 +2,10 @@ import './App.css';
 import React  from 'react';
 import { Button, ButtonGroup, Typography } from '@mui/material'
 
+import { GridActionsCellItem  } from '@mui/x-data-grid';
+import CreateIcon from '@mui/icons-material/Create';
+import DeleteIcon from '@mui/icons-material/Delete';
+// import ColumnPinning from './ColumnPinning';
 
 // dtyling inside jsx first import styled and then create your custom styling
 import { styled } from "@mui/material/styles";
@@ -39,8 +43,9 @@ const rows = [
 
 const columns = [
   { id:1, field: 'col1', headerName: 'First Name', width: 150 },
-  { id:2,field: 'col2', headerName: 'Last Name', width: 150 },
-  { id:3,field: "col3" ,headerName:"Age",width:150},
+  { id:2,field: 'col2',headerClassName: 'super-app-theme--header',
+    headerAlign: 'center', headerName: 'Last Name', width: 150 },
+  { id:3,field: "col3" ,headerName:"Age",width:150,cellClassName: 'super-app-theme--cell',},
   { id:4,field: "col4" ,headerName:"Profession",width:150},
   { id:5,field: "col5" ,headerName:"Birth Year",width:150},
   {
@@ -187,7 +192,7 @@ function App() {
       <hr />
       <CheckBox/>
       <hr />
-      <DataGridComp rows={rows} columns={columns} pinnedColumns=""/>
+      <DataGridComp rows={rows} columns={columns} pinnedColumns={["col4","col2","col3"]}/>
       <hr />
       <RowPinnigComp/>
     </div>
